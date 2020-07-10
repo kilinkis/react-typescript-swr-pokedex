@@ -3,7 +3,7 @@
 This little react app uses [SWR](https://swr.vercel.app/) by [Vercel](https://vercel.com/).
 In this particular case, the app fetches data from the [PokeAPI](https://pokeapi.co/) and paginates the results, using `useSWRPages`.
 
-From the example on Smashing Mag.
+From the example on Smashing Mag, but added TypeScript.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
