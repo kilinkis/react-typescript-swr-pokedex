@@ -2,7 +2,7 @@ import useSwr from 'swr';
 
 const baseUrl = 'https://pokeapi.co/api/v2';
 
-export const useRequest = (path, name) => {
+export const useRequest = (path: string, name: string) => {
   if (!path) {
     throw new Error('Path is required');
   }

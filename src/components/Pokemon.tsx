@@ -1,9 +1,16 @@
 import React from 'react';
-import { useRequest } from '../useRequest'
+import { useRequest } from '../useRequest';
 
-export const Pokemon = ({ pokemon }) => {
-  const { name } = pokemon
-  const { data, error } = useRequest('/pokemon', name)
+interface pokemonObject {
+  pokemon: {
+    name: string;
+  };
+}
+
+export const Pokemon = ({ pokemon }: pokemonObject) => {
+  
+  const { name } = pokemon;
+  const { data, error } = useRequest('/pokemon', name);
 
   if (error) return <h1>Something went wrong!</h1>;
   if (!data) return <h1>Loading...</h1>;
@@ -18,7 +25,7 @@ export const Pokemon = ({ pokemon }) => {
       />
       <h1 className="Card--name">{name}</h1>
       <span className="Card--details">
-        {data.types.map((poke) => poke.type.name).join(', ')}
+        {data.types.map((poke: pokemon) => poke.type.name).join(', ')}
       </span>
     </div>
   );
