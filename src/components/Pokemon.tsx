@@ -2,9 +2,7 @@ import React from 'react';
 import { useRequest } from '../useRequest';
 
 interface pokemonObject {
-  pokemon: {
-    name: string;
-  };
+  pokemon: pokemon
 }
 
 export const Pokemon = ({ pokemon }: pokemonObject) => {
